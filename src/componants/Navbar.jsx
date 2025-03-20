@@ -84,7 +84,7 @@ const Navbar = () => {
               </button>
               {isDropdownOpen && (
                 <div className="absolute bg-gray-700 text-white w-48 mt-2 rounded-lg shadow-lg z-50">
-                  {["Beauty Brand", "Women's Clothes", "Men's Clothes", "Electronics", "Mobiles", "Shoes"].map(
+                  {["Beauty Brand", "Women'Clothes", "Men'Clothes", "Electronics", "Mobiles", "Shoes"].map(
                     (category, index) => (
                       <button
                         key={index}

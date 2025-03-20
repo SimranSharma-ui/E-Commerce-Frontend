@@ -154,7 +154,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = async (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     try {
       await axios.get(`${apiUrl}/api/auth/Logout`, {
         withCredentials: true,
