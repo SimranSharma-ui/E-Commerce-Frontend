@@ -21,29 +21,12 @@ function Sidebar({ setComponent }) {
 
   return (
     <>
-   
-      <div
-        className="sm:hidden sticky top-0 left-4 "
-        onClick={() => setShow(!show)}
-      >
-        <CiMenuBurger className="text-3xl text-gray-700 hover:text-gray-900 transition-all duration-300 cursor-pointer" />
-      </div>
-
   
       <div
-        className={` sticky top-0  left-0 h-auto w-64 bg-gradient-to-b from-purple-500 to-indigo-600 text-white z-30 transform transition-transform duration-300 ${
-          show ? "translate-x-0" : "-translate-x-full"
-        } sm:translate-x-0`}
+        className={` sticky top-0  left-0 h-auto w-80 bg-gradient-to-b from-purple-500 to-indigo-600 text-white z-30 transform transition-transform duration-300 
+        `}
       >
-     
-        <div
-          className="sm:hidden absolute top-4 right-4 text-xl cursor-pointer"
-          onClick={() => setShow(!show)}
-        >
-          <BiSolidLeftArrowAlt className="text-3xl text-white hover:text-gray-300 transition-all duration-300" />
-        </div>
-
-  
+    
         <div className="text-center py-8">
           <img
             className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg"
