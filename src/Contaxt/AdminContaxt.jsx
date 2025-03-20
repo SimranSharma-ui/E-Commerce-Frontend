@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 import axios from "axios";
 import { useAuth } from "./AuthContaxt";
 import Swal from "sweetalert2"; 
+import { useNavigate } from "react-router-dom";
 
 
 export const AdminContext = createContext();
@@ -16,6 +17,7 @@ export const AdminProvider = ({ children }) => {
   const [inCart, setInCart] = useState(false);
   const [likedProducts, setLikedProducts] = useState([]);
   const [cartProducts, setCartProducts] = useState([]);
+  const navigate = useNavigate()
   
   const [formData, setFormData] = useState({
     name: "",
@@ -279,6 +281,8 @@ export const AdminProvider = ({ children }) => {
           text: response.data.message,
         });
         setAuthorised(true);
+
+        await fetchProduct(id);
         setProduct((prevProducts) =>
           prevProducts.map((product) =>
             product._id === id ? { ...product, ...update } : product
@@ -291,6 +295,7 @@ export const AdminProvider = ({ children }) => {
           imageUrl: "",
           type: "",
         });
+        navigate("/Product");
       }
     } catch (error) {
       const errorMessage = error.response?.data?.message || "Error updating product";
