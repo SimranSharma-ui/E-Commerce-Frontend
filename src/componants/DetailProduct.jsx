@@ -59,7 +59,7 @@ const DetailProduct = () => {
         
       </div>
       <div className="grid md:grid-cols-2 gap-12 bg-white rounded-lg shadow-lg overflow-hidden">
-        {/* Product Image */}
+       
         <div className="bg-gray-100 flex justify-center items-center p-6">
           <img
             src={product.imageUrl}
@@ -68,13 +68,13 @@ const DetailProduct = () => {
           />
         </div>
 
-        {/* Product Details */}
+       
         <div className="p-6">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{product.name}</h1>
           <p className="text-lg text-gray-700 mb-6">{product.description}</p>
           <p className="text-2xl font-semibold text-green-600 mb-6">${product.price}</p>
            <p className="text-2xl font-semibold text-blue-600 mb-6">Created By: {product.admin?.name}</p>
-          {/* Buttons */}
+          
           <div className=" grid grid-cols-2 gap-6 ">
             <button
               onClick={handleLike}
